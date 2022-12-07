@@ -1,10 +1,10 @@
 {
-  "name": "moodlemobile",
-  "version": "4.1.0-dev",
-  "description": "The official app for Moodle.",
+  "name": "ieltsscience",
+  "version": "4.1.0",
+  "description": "The official app for IELTS Science.",
   "author": {
-    "name": "Moodle Pty Ltd.",
-    "email": "mobile@moodle.com"
+    "name": "IELTS Science",
+    "email": "admin@ieltsscience.fun"
   },
   "repository": {
     "type": "git",
