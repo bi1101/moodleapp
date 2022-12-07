@@ -46,7 +46,7 @@ import { CoreComponentsRegistry } from '@singletons/components-registry';
 import { CoreCollapsibleItemDirective } from './collapsible-item';
 import { CoreCancellablePromise } from '@classes/cancellable-promise';
 import { AsyncComponent } from '@classes/async-component';
-import { CoreText } from '@singletons/text';
+import { CorePath } from '@singletons/path';
 import { CoreDom } from '@singletons/dom';
 import { CoreEvents } from '@singletons/events';
 import { CoreRefreshContext, CORE_REFRESH_CONTEXT } from '@/core/utils/refresh-context';
@@ -171,7 +171,7 @@ export class CoreFormatTextDirective implements OnChanges, OnDestroy, AsyncCompo
      * Apply CoreExternalContentDirective to a certain element.
      *
      * @param element Element to add the attributes to.
-     * @return External content instance or undefined if siteId is not provided.
+     * @returns External content instance or undefined if siteId is not provided.
      */
     protected addExternalContent(element: Element): CoreExternalContentDirective | undefined {
         if (!this.siteId) {
@@ -400,7 +400,7 @@ export class CoreFormatTextDirective implements OnChanges, OnDestroy, AsyncCompo
     /**
      * Apply formatText and set sub-directives.
      *
-     * @return Promise resolved with a div element containing the code.
+     * @returns Promise resolved with a div element containing the code.
      */
     protected async formatContents(): Promise<FormatContentsResult> {
         // Retrieve the site since it might be needed later.
@@ -463,7 +463,7 @@ export class CoreFormatTextDirective implements OnChanges, OnDestroy, AsyncCompo
      *
      * @param div Div element.
      * @param site Site instance.
-     * @return Promise resolved when done.
+     * @returns Promise resolved when done.
      */
     protected treatHTMLElements(div: HTMLElement, site?: CoreSite): ElementController[] {
         const images = Array.from(div.querySelectorAll('img'));
@@ -666,7 +666,7 @@ export class CoreFormatTextDirective implements OnChanges, OnDestroy, AsyncCompo
     /**
      * Returns the element width in pixels.
      *
-     * @return The width of the element in pixels.
+     * @returns The width of the element in pixels.
      */
     protected async getElementWidth(): Promise<number> {
         if (!this.domElementPromise) {
@@ -808,7 +808,7 @@ export class CoreFormatTextDirective implements OnChanges, OnDestroy, AsyncCompo
             // Check if it's a Vimeo video. If it is, use the wsplayer script instead to make restricted videos work.
             const matches = src.match(/https?:\/\/player\.vimeo\.com\/video\/([0-9]+)([?&]+h=([a-zA-Z0-9]*))?/);
             if (matches && matches[1]) {
-                let newUrl = CoreText.concatenatePaths(site.getURL(), '/media/player/vimeo/wsplayer.php?video=') +
+                let newUrl = CorePath.concatenatePaths(site.getURL(), '/media/player/vimeo/wsplayer.php?video=') +
                     matches[1] + '&token=' + site.getToken();
 
                 let privacyHash: string | undefined | null = matches[3];
@@ -911,7 +911,7 @@ export class CoreFormatTextDirective implements OnChanges, OnDestroy, AsyncCompo
      * Convert window.open to window.openWindowSafely inside HTML tags.
      *
      * @param text Text to treat.
-     * @return Treated text.
+     * @returns Treated text.
      */
     protected treatWindowOpen(text: string): string {
         // Get HTML tags that include window.open. Script tags aren't executed so there's no need to treat them.

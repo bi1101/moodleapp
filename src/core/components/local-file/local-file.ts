@@ -26,7 +26,7 @@ import { CoreTimeUtils } from '@services/utils/time';
 import { CoreUtils, CoreUtilsOpenFileOptions, OpenFileAction } from '@services/utils/utils';
 import { CoreForms } from '@singletons/form';
 import { CoreApp } from '@services/app';
-import { CoreText } from '@singletons/text';
+import { CorePath } from '@singletons/path';
 
 /**
  * Component to handle a local file. Only files inside the app folder can be managed.
@@ -64,7 +64,7 @@ export class CoreLocalFileComponent implements OnInit {
     protected defaultIsOpenWithPicker = false;
 
     /**
-     * Component being initialized.
+     * @inheritdoc
      */
     async ngOnInit(): Promise<void> {
         this.manage = CoreUtils.isTrueOrOne(this.manage);
@@ -183,7 +183,7 @@ export class CoreLocalFileComponent implements OnInit {
 
         const modal = await CoreDomUtils.showModalLoading();
         const fileAndDir = CoreFile.getFileAndDirectoryFromPath(this.relativePath);
-        const newPath = CoreText.concatenatePaths(fileAndDir.directory, newName);
+        const newPath = CorePath.concatenatePaths(fileAndDir.directory, newName);
 
         try {
             // Check if there's a file with this name.

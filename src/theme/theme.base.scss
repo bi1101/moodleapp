@@ -595,6 +595,11 @@ core-split-view.menu-and-content {
 // Using router outlet to avoid changing styles on modals.
 body.core-iframe-fullscreen ion-router-outlet {
 
+    .core-course-header,
+    ion-tab-bar {
+        display: none !important;
+    }
+
     ion-tab-bar.mainmenu-tabs {
         display: none;
 
@@ -630,7 +635,7 @@ body.core-iframe-fullscreen ion-router-outlet {
         .ion-page {
             flex-direction: row-reverse;
             ion-header {
-                width: calc(var(--core-header-toolbar-height), var(--ion-safe-area-right));
+                width: calc(var(--core-header-toolbar-height) + var(--ion-safe-area-right));
                 @include safe-area-padding-horizontal(null, 0px);
                 background: var(--core-header-toolbar-background);
 
@@ -645,6 +650,10 @@ body.core-iframe-fullscreen ion-router-outlet {
                     flex-direction: column-reverse;
                 }
             }
+        }
+
+        core-tabs-outlet {
+            width: 100%;
         }
     }
 }
@@ -1434,6 +1443,11 @@ ion-item.item-disabled,
 ion-item.item-interactive-disabled:not(.item-multiple-inputs) ion-label,
 ion-datetime.datetime-disabled {
     opacity: .8 !important;
+}
+
+// Hide details on items to align badges.
+ion-item.hide-detail {
+    --detail-icon-opacity: 0;
 }
 
 // Make links clickable when inside radio or checkbox items. Style part.
