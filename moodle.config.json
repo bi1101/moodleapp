@@ -1,8 +1,8 @@
 {
     "app_id": "fun.IELTSScience.app",
     "appname": "IELTS Science",
-    "versioncode": 41000,
-    "versionname": "4.1.0",
+    "versioncode": 41100,
+    "versionname": "4.1.1",
     "cache_update_frequency_usually": 420000,
     "cache_update_frequency_often": 1200000,
     "cache_update_frequency_sometimes": 3600000,
@@ -71,13 +71,13 @@
         "medium": 110,
         "high": 120
     },
-    "customurlscheme": "ieltsscience",
+    "customurlscheme": "moodlemobile",
     "siteurl": "https://estudy.ieltsscience.fun",
     "sitename": "IELTS Science",
     "multisitesdisplay": "",
     "sitefindersettings": {},
     "onlyallowlistedsites": false,
-    "skipssoconfirmation": false,
+    "skipssoconfirmation": true,
     "forcedefaultlanguage": false,
     "privacypolicy": "",
     "notificoncolor": "#ff0000",
@@ -85,10 +85,10 @@
     "enableonboarding": true,
     "forceColorScheme": "",
     "forceLoginLogo": false,
-    "ioswebviewscheme": "moodleappfs",
+    "ioswebviewscheme": "ieltsscience",
     "appstores": {
         "android": "fun.IELTSScience.app",
-        "ios": "tobecomming"
+        "ios": "id6444850190"
     },
     "wsrequestqueuelimit": 10,
     "wsrequestqueuedelay": 100,
