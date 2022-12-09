@@ -79,13 +79,24 @@
     "@moodlehq/cordova-plugin-inappbrowser": "5.0.0-moodle.3",
     "@moodlehq/cordova-plugin-intent": "2.2.0-moodle.1",
     "@moodlehq/cordova-plugin-ionic-webview": "5.0.0-moodle.1",
+<<<<<<< HEAD
     "@moodlehq/cordova-plugin-local-notification": "0.9.0-moodle.7",
+=======
+    "@moodlehq/cordova-plugin-local-notification": "0.9.0-moodle.3",
+>>>>>>> parent of 9aa70c8c2 (MOBILE-4123 cordova: Update local-notifications plugin)
     "@moodlehq/cordova-plugin-qrscanner": "3.0.1-moodle.4",
     "@moodlehq/cordova-plugin-zip": "3.1.0-moodle.1",
+<<<<<<< HEAD
     "@moodlehq/phonegap-plugin-push": "4.0.0-moodle.2",
     "@ngx-translate/core": "13.0.0",
     "@ngx-translate/http-loader": "6.0.0",
     "@types/chart.js": "2.9.31",
+=======
+    "@moodlehq/phonegap-plugin-push": "4.0.0-moodle.1",
+    "@ngx-translate/core": "^13.0.0",
+    "@ngx-translate/http-loader": "^6.0.0",
+    "@types/chart.js": "^2.9.31",
+>>>>>>> parent of e968e988e (MOBILE-4123 cordova: Update push plugin to 4.0.0-moodle.2)
     "@types/cordova": "0.0.34",
     "@types/dom-mediacapture-record": "1.0.7",
     "chart.js": "2.9.4",
