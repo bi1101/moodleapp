@@ -43,7 +43,7 @@ html.dark {
     --subdued-text-color:       var(--medium);
     --stroke:                   var(--gray-700);
 
-    --contrast-background: var(--gray-900);
+    --contrast-background: #{$background-color-dark};
 
     --loader-shine: 90, 90, 90;
 
@@ -60,15 +60,15 @@ html.dark {
 
     --core-input-stroke: var(--gray-600);
     --core-input-text: var(--dark);
-    --core-input-background: var(--gray-900);
+    --core-input-background: var(--black);
 
     ion-content {
         --background: var(--ion-background-color);
-        --background-alternative: var(--gray-900);
+        --background-alternative: var(--black);
     }
 
     --core-bottom-tabs-badge-text-color: var(--primary-contrast);
-    --core-bottom-tabs-background: var(--gray-900);
+    --core-bottom-tabs-background: #{$background-color-dark};
     --core-bottom-tabs-color: var(--gray-200);
 
     ion-action-sheet {
@@ -79,12 +79,12 @@ html.dark {
 
     --core-link-color: var(--info-tint);
 
-    --core-header-toolbar-background:   var(--gray-900);
+    --core-header-toolbar-background:   #{$background-color-dark};
     --core-header-toolbar-color:        var(--text-color);
     --core-header-toolbar-border-color: var(--stroke);
 
-    --core-tabs-background: var(--gray-900);
-    --core-tab-background: var(--core-tabs-background);
+    --core-tabs-background: #{$background-color-dark};
+    --core-tab-background: #{$background-color-dark};
     --core-tab-color: var(--subdued-text-color);
     --core-tab-border-color: var(--gray-200);
     --core-tab-color-active: var(--dark);
@@ -118,9 +118,9 @@ html.dark {
 
     --background-gradient-rgb: #{$ion-item-background-dark-rgb};
 
-    --core-login-background: var(--gray-900);
+    --core-login-background: #{$background-color-dark};
     --core-login-text-color: var(--white);
-    --core-login-input-background: var(--core-login-background);
+    --core-login-input-background: #{$background-color-dark};
     --core-login-input-color: var(--core-login-text-color);
 
     --core-question-correct-color: var(--success-tint);
@@ -160,4 +160,10 @@ html.dark {
 
     --addon-forum-border-color: var(--gray-500);
     --addon-forum-highlight-color: var(--gray-800);
+}
+#target {
+    background-color: black;
+}
+.reading-text {
+    background-color: var(--gray-900);
 }

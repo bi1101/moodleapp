@@ -31,12 +31,12 @@ $text-color-dark-rgb:      color-to-rgb-list($text-color-dark) !default;
 
 $background-color:          $white !default;
 $background-color-rgb:      color-to-rgb-list($background-color) !default;
-$background-color-dark:     $gray-900 !default; // #1a1a1a
+$background-color-dark:     $black !default; // #1a1a1a
 $background-color-dark-rgb: color-to-rgb-list($background-color-dark) !default;
 
 $ion-item-background:      $white !default;
 $ion-item-background-rgb:  color-to-rgb-list($ion-item-background) !default;
-$ion-item-background-dark: $gray-900 !default;
+$ion-item-background-dark: $black !default;
 $ion-item-background-dark-rgb: color-to-rgb-list($ion-item-background-dark) !default;
 
 $primary:    $brand-color !default;
@@ -47,8 +47,9 @@ $success:    $green !default;
 $info:       $blue !default;
 $light:      $gray-100 !default;
 $medium:     $gray-700 !default;
-$dark:       $gray-900 !default;
-
+$dark:       $black !default;
+$reading-question-background: var(--ion-background-color);
+$reading-text-background: var(--ion-background-color);
 $colors:  (
     primary: (light: $primary, dark: $primary),
     secondary: (light: $secondary, dark: $gray-700),
